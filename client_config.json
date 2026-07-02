@@ -1,0 +1,28 @@
+{
+  "smb": {
+        "enabled": true,
+        "server": "192.168.220.137",
+        "share_name": "smb_share",
+        "username": "",
+        "password": "",
+        "domain_name" : "",
+        "client_machine_name": "ClientMachine"
+  },
+  "nfs": {
+        "enabled": true,
+        "server": "192.168.220.137",
+        "remote_path": "/var/www/nfs_export",
+        "windows_local_mount_point": "Z:",
+        "linux_local_mount_point": "/nfs_export",
+        "client_settings" : {
+          "nfsvers": "4",
+          "tcp": true,
+          "rsize" : 65536,
+          "wsize" : 65536
+        }
+  },
+  "operations": {
+        "num_operations": 10,
+        "file_path": "testfile.bin"
+  }
+}

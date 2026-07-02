@@ -1,0 +1,37 @@
+{
+    "smb": {
+          "server": "localhost",
+          "share_name": "/smb_share",
+          "username": "root",
+          "password": "root",
+          "client_machine_name": "",
+          "server_settings" : {
+            "socket options" : "TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192",
+            "read raw" : "yes",
+            "write raw" : "yes",
+            "getwd cache" : "yes",
+            "max xmit" : 65535, 
+            "dead time" : 15, 
+            "use sendfile" : "yes",
+            "aio read size" : 16384, 
+            "aio write size" : 16384, 
+            "aio write behind" : true
+          }
+    },
+    "nfs": {
+          "server": "localhost",
+          "export_path": "/var/www/nfs_export",
+          "server_settings" : {
+            "rpcnfsdcount": 16,
+            "lease_time": 90,
+            "grace_time": 90
+          }
+    },
+    "fuse" : {
+      "fuse_smb_mount_point": "/fuse_smb",
+      "fuse_smb_root" : "/fuse_smb_root",
+      "fuse_nfs_mount_point": "/fuse_nfs",
+      "fuse_nfs_root" : "/fuse_nfs_root"
+    }
+  }
+  
